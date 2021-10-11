@@ -12,6 +12,7 @@ const VerticalLayout = styled.div`
   justify-content: space-around;
   align-items: center;
   position: relative;
+  left: 0;
 `
 
 const VerticalBar = () => {
