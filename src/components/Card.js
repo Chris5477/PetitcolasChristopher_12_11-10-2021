@@ -1,13 +1,18 @@
 import styled from "styled-components";
 
 const DivCard = styled.div`
-  width: 70%;
+  width: 20%;
   height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  padding: 30px 100px 30px 30px;
+  background-color:#f2f2f2;
 `;
+
+const StyleIMg = styled.img`
+width:30px;`
 
 
 const CountCategory = styled.p`
@@ -30,7 +35,7 @@ const Card = (props) => {
 
   return (
     <DivCard>
-      <img style={{backgroundColor: props.color, padding:15}} src={props.img} alt="icon" />
+      <StyleIMg style={{backgroundColor: props.color, padding:20, borderRadius:"6px"}} src={props.img} alt="icon" />
       <div>
         <CountCategory>
           {props.indicator}
