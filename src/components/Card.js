@@ -1,41 +1,42 @@
 import styled from "styled-components";
 
 const DivCard = styled.div`
-  width: 40%;
-  height: 100px;
+  width: 70%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 50px;
-  padding: 30px 50px 30px 10px;
-  background-color:#f2f2f2;
+  padding: 20px 10px;
+  background-color: #fbfbfb;
 `;
 
 const StyleIMg = styled.img`
-width:30px;`
-
+width:17px;
+height:17px;
+`;
 
 const CountCategory = styled.p`
+width: 75px;
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
   font-size: 20px;
   line-height: 24px;
-  font-weight: 700;
+`;
+
+const Type = styled.p`
   margin: 0;
-  `;
-  
-  const Type = styled.p`
+  font-style: normal;
+  font-weight: 500;
   font-size: 14px;
   line-height: 24px;
-  font-weight: 500;
-  margin:0;
 `;
 
 const Card = (props) => {
   let unity = props.category === "calories" ? "Kcal" : "g";
 
-
   return (
     <DivCard>
-      <StyleIMg style={{backgroundColor: props.color, padding:20, borderRadius:"6px"}} src={props.img} alt="icon" />
+      <StyleIMg style={{ backgroundColor: props.color, padding: 15, borderRadius: "6px" }} src={props.img} alt="icon" />
       <div>
         <CountCategory>
           {props.indicator}

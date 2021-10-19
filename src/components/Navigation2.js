@@ -2,29 +2,31 @@ import { Link } from "react-router-dom"
 import styled from "styled-components";
 
 const Menu = styled.div`
-display : flex;
-flex-direction:column;
-align-items : center;
+@media screen and (min-width: 1024px){
+  width: 91px;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: center;
+}
 `
 const ContainerPicture = styled(Link)`
-width : 64px;
-height 64px;
-background-color:#FFFFFF;
-border-radius:6px;
-display:flex;
-justify-content:center;
-align-items:center;
-margin-bottom:20px;
+@media screen and (min-width: 1024px){
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 7px;
+}
 `
 
 const Footer = styled.footer`
-font-size: 12px;
-font-weight : 500;
-color: #FFFFFF;
-transform : rotateZ(-90deg);
-width: 150px;
-position:absolute;
-bottom:12%;
+@media screen and (min-width: 1024px){
+  color: #FFFFFF;
+  transform: rotateZ(-90deg);
+  width: 150px;
+  font-size: 12px;
+  position: absolute;
+  bottom:14%;
+}
 `
 
 const Navigation2 = () => {

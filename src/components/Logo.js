@@ -3,24 +3,25 @@ import styled from "styled-components";
 
 const DivLogo = styled.div`
   display: flex;
-  padding-left: 25px;
+  align-items: center;
+  margin-left: 10px;
 `;
 
 const NameApp = styled.h1`
-  color: #e60000;
-  margin-left: 20px;
-  font-size: 24px;
-  font-weight: 500;
+margin: 0;
+color: #E60000;
+margin-left: 10px;
 `;
 
 const ContainerLogo = styled.div`
-width : 57.2px;
-height 57.2px;
+background-color: #E60000;
 border-radius: 50%;
-background-color : #E60000;
-display : flex;
-justify-content; center;
+display: flex;
+justify-content: center;
 align-items: center;
+width: 50px;
+height: 50px;
+padding: 5px;
 `;
 
 const Logo = () => {

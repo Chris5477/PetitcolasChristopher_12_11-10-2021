@@ -3,14 +3,13 @@ import Card from "./Card";
 
 const Cards = styled.div`
   grid-area: 2/3/4/4;
-  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 `;
 const AllCards = (props) => {
-  const { calorieCount, proteinCount, carbohydrateCount, lipidCount } = props.energy.keyData;
+  const { calorieCount, proteinCount, carbohydrateCount, lipidCount } = props.energy[0].keyData;
 
   return (
     <Cards>

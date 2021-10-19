@@ -4,15 +4,14 @@ import styled from "styled-components";
 import Navigation2 from "./Navigation2";
 
 const VerticalLayout = styled.div`
-  background-color:#020203;
-  width: 117px;
-  height: 93vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  position: absolute;
-  left: 0;
+background-color: black;
+width: 97px;
+height: 749px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: space-around;
+position: relative;
 `
 
 const VerticalBar = () => {

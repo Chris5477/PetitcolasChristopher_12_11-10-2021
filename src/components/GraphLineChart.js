@@ -1,39 +1,36 @@
 import React from "react";
-import { USER_AVERAGE_SESSIONS as data } from "../mock/mock_data";
-import { LineChart, Line, XAxis, Tooltip, CartesianGrid } from "recharts";
+
+import { LineChart, Line, XAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
 import styled from "styled-components";
 
 const StyleGraph2 = styled.div`
   background-color: red;
+  width: 220px;
+  height: 220px;
 `;
-export const GraphLineChart = () => {
+
+export const GraphLineChart = (props) => {
+  const data = props.average[0].sessions;
+
   return (
     <StyleGraph2>
-      
-         <LineChart
-      width={350}
-      height={350}
-      data={data[0].sessions}
-      margin={{
-        top: 5,
-        right: 30,
-        left: 20,
-        bottom: 50
-      }}
-    >
-      <CartesianGrid horizontalPoints={[0, 0]} verticalPoints={[0, 0]} />
-      <XAxis dataKey="day"/>
-      <Tooltip  />
-      <Line
-        type="monotone"
-        dataKey="sessionLength"
-        stroke="white"
-        strokeWidth={3}
-        activeDot={{ r: 8 }}
-        dot={{r: 0}}
-      />
-    </LineChart>
-     </StyleGraph2>
+      <ResponsiveContainer minWidth="220px">
+      <LineChart
+        data={data}
+        margin={{
+          top: 5,
+          right: 10,
+          left: 5,
+          bottom: 10,
+        }}
+        >
+        <CartesianGrid horizontalPoints={[0, 0]} verticalPoints={[0, 0]} />
+        <XAxis dataKey="day" />
+        <Tooltip />
+        <Line width={220} height={220} type="monotone" dataKey="sessionLength" stroke="white" strokeWidth={3} activeDot={{ r: 8 }} dot={{ r: 0 }} />
+      </LineChart>
+        </ResponsiveContainer>
+    </StyleGraph2>
   );
 };
 
