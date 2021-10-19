@@ -9,18 +9,19 @@ import { GraphBarChart } from "./GraphBarChart";
 const StyleMaincontainer = styled.div`
   display: grid;
   grid-template-columns: 117px 2fr 1fr;
-  grid-template-rows: 20vh repeat(2, 30vh);
+  grid-template-rows: 20vh repeat(2, 35vh);
   background-color :#FBFBFB;
 
 `;
 
 const Content = (props) => {
+ 
   return (
     <StyleMaincontainer>
       <VerticalBar />
       <UserInfo name={props.info[0]} />
       <GraphBarChart />
-      <ContainerGraphs />
+      <ContainerGraphs data={props.info[0].todayScore} />
       <AllCards energy={props.info[0]} />
     </StyleMaincontainer>
   );

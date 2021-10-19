@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 const DivCard = styled.div`
-  width: 20%;
+  width: 40%;
   height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 50px;
-  padding: 30px 100px 30px 30px;
+  padding: 30px 50px 30px 10px;
   background-color:#f2f2f2;
 `;
 

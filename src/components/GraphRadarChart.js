@@ -14,10 +14,8 @@ import {
     PolarRadiusAxis
 } from "recharts";
 
-
-
 const StyleGraph3 = styled.div`
-background-color: black`
+background-color: black;`
 
 
 
@@ -42,7 +40,7 @@ export const GraphRadarChart = () =>{
       height={350}
       data={data[0].data}
       >
-      <PolarGrid />
+      <PolarGrid/>
       <PolarAngleAxis dataKey="kind" />
       <PolarRadiusAxis />
       <Radar
