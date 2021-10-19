@@ -1,5 +1,8 @@
+// IMPORT ALL DEPENDENCIES
 import { NavLink } from "react-router-dom"
 
+
+//BUILD COMPOENENT ERROR IF A PROBLEM ABOUT ROUTE , NAVLINK CREATE A LINK THAT REDIRECT USER ON HOME PAGE
 const Error = () => {
     return(
         <div>

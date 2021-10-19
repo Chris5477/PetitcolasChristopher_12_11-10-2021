@@ -1,13 +1,16 @@
+//IMPORT ALL DEPENDENCIES
+
 import Header from "./Header";
 import styled from "styled-components";
 import VerticalBar from "../components/VerticalBar";
 import ContainerGraphs from "./ContainerGraphs";
 import AllCards from "./AllCard";
-import { GraphBarChart } from "./GraphBarChart";
+import GraphBarChart from "./GraphBarChart";
 
 
 
-
+// USE STYLED-COMPONENT FOR CSS
+//STYLE FOR DIV TAG
 const StyleMaincontainer = styled.div`
 @media screen and (min-width: 1024px){
   width: 100%;
@@ -18,6 +21,8 @@ const StyleMaincontainer = styled.div`
 }
 `;
 
+//BUILD COMPONENT CONTENT, HE RETRIEVES DATAS SENT BY THIS PARENT
+// EACH COMPOnENT SEND PROPS ON THESE CHILDREN
 const Content = (props) => {
 
   return (

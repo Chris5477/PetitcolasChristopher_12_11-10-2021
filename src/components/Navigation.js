@@ -1,7 +1,11 @@
+//IMPORT ALL DEPENDECIES
+
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+//USE STYLE-COMPOENTS FOR CSS
+//STYLE OF NAV TAG
 const ContainerNav = styled.nav`
   @media screen and (min-width: 1024px) {
     width: 100%;
@@ -12,6 +16,7 @@ const ContainerNav = styled.nav`
   }
 `;
 
+//STYLE OF UL TAG
 const ListLink = styled.ul`
   width: 100%;
   height: auto;
@@ -22,7 +27,7 @@ const ListLink = styled.ul`
   padding-left: 10px;
   padding-right: 87px;
 `;
-
+//STYLE COMPONENT FROM REACT , I PUT HIM BETWEEN PARENTHESIS
 const Links = styled(Link)`
   @media screen and (min-width: 1024px) {
     color: #ffffff;
@@ -33,15 +38,17 @@ const Links = styled(Link)`
   }
 `;
 
+//BUILD COMPONENT NAVIGATION
+// USE LINK FOR THE NAVIGATION , KEY-WORD TO REDIRECT USER , TO SET THE PATH
 const Navigation = () => {
   return (
     <ContainerNav>
       <ListLink>
         <Logo />
         <Links to="/">Acceuil</Links>
-        <Links to="/id">Profil</Links>
-        <Links to="/settings">Réglage</Links>
-        <Links to="/community">Communauté</Links>
+        <Links to="/">Profil</Links>
+        <Links to="/">Réglage</Links>
+        <Links to="/">Communauté</Links>
       </ListLink>
     </ContainerNav>
   );

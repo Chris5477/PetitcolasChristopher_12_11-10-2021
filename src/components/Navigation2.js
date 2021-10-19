@@ -1,6 +1,8 @@
+//IMPORT ALL DEPENDECIES
 import { Link } from "react-router-dom"
 import styled from "styled-components";
 
+// STYLE DIV TAG
 const Menu = styled.div`
 @media screen and (min-width: 1024px){
   width: 91px;
@@ -10,6 +12,7 @@ const Menu = styled.div`
   align-items: center;
 }
 `
+//STYLE COMPONENT REACT LINK
 const ContainerPicture = styled(Link)`
 @media screen and (min-width: 1024px){
   margin-bottom: 20px;
@@ -17,7 +20,7 @@ const ContainerPicture = styled(Link)`
   border-radius: 7px;
 }
 `
-
+//STYLE FOOTER TAG
 const Footer = styled.footer`
 @media screen and (min-width: 1024px){
   color: #FFFFFF;
@@ -28,7 +31,7 @@ const Footer = styled.footer`
   bottom:14%;
 }
 `
-
+//BUILD COMPONENT NAVIGATION2
 const Navigation2 = () => {
   return (
     <div>

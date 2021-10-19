@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { USER_PERFORMANCE as data } from "../mock/mock_data";
 
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from "recharts";
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, LabelList } from "recharts";
 
 const StyleGraph3 = styled.div`
   background-color: black;
@@ -24,6 +24,7 @@ export const GraphRadarChart = () => {
         <PolarAngleAxis dataKey="kind" />
         <PolarRadiusAxis />
         <Radar dataKey="value" stroke="red" fill="red" fillOpacity={0.7} />
+        <LabelList color="white"/>;
       </RadarChart>
     </StyleGraph3>
   );
