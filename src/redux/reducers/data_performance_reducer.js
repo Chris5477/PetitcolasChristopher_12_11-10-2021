@@ -2,7 +2,7 @@ import { LOAD_DATA_PERFORMANCE, SUCCESS_GET_DATA_PERFORMANCE, ERROR_GET_DATA_PER
 
 const dataStatePerformance = {
     isLoading : false,
-    dataPerformance : {},
+    performance : [],
     error :"" 
 
 }
@@ -20,14 +20,14 @@ export const dataPerformanceReducer = (state = dataStatePerformance, action) => 
             return{
                 ...state,
                 isLoading : false,
-                dataPerformance : action.payload,
+                performance : action.payload,
                 error : ""
             }
         case ERROR_GET_DATA_PERFORMANCE:
             return{
                 ...state,
                 isLoading: false,
-                dataPerformance : {},
+                performance : [],
                 error: action.payload
 
             }

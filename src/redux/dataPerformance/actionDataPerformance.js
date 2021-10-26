@@ -26,7 +26,7 @@ const errorGetDataPerformance = (error) => {
 
 export const apiCallPerformance = () => {
     return dispatch => {
-        dispatch(loaderPerformance)
+        dispatch(loaderPerformance())
 
         axios.get("http://localhost:3000/user/12/Performance")
         .then(res => dispatch(getDataSuccessPerformance(res.data)))

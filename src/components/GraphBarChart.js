@@ -1,62 +1,48 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { connect } from "react-redux";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import { apiCallActivity } from "../redux/dataActivity/actionDataActivity";
 import "../styles/barChart.css";
 
 const GraphBarChart = ({ activity, getData }) => {
-
-  const [data, setData] = useState(null)
-
   useEffect(() => {
     getData();
-    setData(activity.activity.data.sessions)
-
   }, [getData]);
 
-  const display = activity.isLoading ? (
-    <div className="spinner"></div>
-  ) : activity.error && (
-    <p>Error </p>
-  ) 
+  return (
+    <div className="bar-graphe">
+      <ResponsiveContainer width={"100%"} height={"100%"}>
+        <BarChart
+          data={activity}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 80,
+            bottom: 20,
+          }}
+        >
+          <CartesianGrid verticalPoints={[0, 0]} />
 
-for (const index in data){
-  data[index].day = index
-}
+          <XAxis dataKey="day" />
 
-  return <div className="bar-graphe">
-    <ResponsiveContainer width={"100%"} height={"100%"}>
-      <BarChart
-        data={data}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 80,
-          bottom: 20,
-        }}
-      >
-        <CartesianGrid verticalPoints={[0, 0]} />
+          <YAxis orientation="right" />
 
-        <XAxis dataKey="day" />
+          <Tooltip />
 
-        <YAxis orientation="right" />
+          <Legend
+            wrapperStyle={{ right: 120, top: -30 }}
+            iconType={"circle"}
+            iconSize={7}
+            align={"right"}
+            verticalAlign={"top"}
+          />
 
-        <Tooltip />
-
-        <Legend
-          wrapperStyle={{ right: 120, top: -30 }}
-          iconType={"circle"}
-          iconSize={7}
-          align={"right"}
-          verticalAlign={"top"}
-        />
-
-        <Bar dataKey="kilogram" barSize={7} fill="black" />
-        <Bar dataKey="calories" barSize={7} fill="red" />
-      </BarChart>
-    </ResponsiveContainer>
-
-  </div>;
+          <Bar dataKey="kilogram" barSize={7} fill="black" />
+          <Bar dataKey="calories" barSize={7} fill="red" />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  );
 };
 
 const mapStateToProps = (state) => {

@@ -2,7 +2,7 @@ import { ERROR_GET_DATA_USER, LOAD_DATA_USER, SUCCESS_GET_DATA_USER } from "../d
 
 const dataStateUser = {
     isLoading : false,
-    dataUser : {},
+    user : [],
     error :"" 
 
 }
@@ -20,14 +20,14 @@ export const dataUserReducer = (state = dataStateUser, action) => {
             return{
                 ...state,
                 isLoading : false,
-                dataUser: action.payload,
+                user: action.payload,
                 error : ""
             }
         case ERROR_GET_DATA_USER:
             return{
                 ...state,
                 isLoading: false,
-                dataUser: {},
+                user: [],
                 error: action.payload
 
             }

@@ -2,7 +2,7 @@ import { ERROR_GET_DATA_AVERAGE, LOAD_DATA_AVERAGE, SUCCESS_GET_DATA_AVERAGE } f
 
 const dataStateAverage = {
     isLoading : false,
-    dataAverage : {},
+    average : [],
     error : ""
 }
 
@@ -18,14 +18,14 @@ export const dataAverageReducer = (state = dataStateAverage, action) => {
             return{
                 ...state,
                 isLoading : false,
-                dataAverage : action.payload,
+                average : action.payload,
                 error: ""
             }
         case ERROR_GET_DATA_AVERAGE:
             return{
                 ...state,
                 isLoading : false,
-                dataAverage : {},
+                average : [],
                 error: action.payload
             }
         default : return state
