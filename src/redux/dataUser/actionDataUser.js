@@ -26,7 +26,7 @@ const errorGetDataUser = (error) => {
 
 export const apiCallUser = () => {
     return dispatch => {
-        dispatch(loaderUser)
+        dispatch(loaderUser())
 
         axios.get("http://localhost:3000/user/12")
         .then(res => dispatch(getDataSuccessUser(res.data)))

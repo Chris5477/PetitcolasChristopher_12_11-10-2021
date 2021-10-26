@@ -3,16 +3,21 @@ import { connect } from "react-redux";
 import { RadialBarChart, PolarAngleAxis, ResponsiveContainer, RadialBar } from "recharts";
 import { apiCallUser } from "../redux/dataUser/actionDataUser";
 import "../styles/radialProgress.css";
+import { USER_MAIN_DATA } from "../mock/mock_data";
 
-const GraphRadialProgress = ({user, getData}) => {
+const GraphRadialProgress = (/*{user, getDataUser}*/) => {
 
-  useEffect(() => {
-    getData()
-  },[getData])
+  const objectif = USER_MAIN_DATA[0].todayScore * 100
+
+ 
+
+  // useEffect(() => {
+  //   getDataUser()
+  // },[getDataUser])
   
   // const objectif = user.user.data.todayScore * 100 ;
 
-  // const data = [{ name: "Objectif", value: objectif }];
+  const data = [{ name: "Objectif", value: objectif }];
 
   const circleSize = 250;
   return (
@@ -26,7 +31,7 @@ const GraphRadialProgress = ({user, getData}) => {
           innerRadius={90}
           outerRadius={120}
           barSize={10}
-          data={user}
+          data={data}
           startAngle={230}
           endAngle={-130}
         >
@@ -39,7 +44,7 @@ const GraphRadialProgress = ({user, getData}) => {
             dominantBaseline="middle"
             className="progress-label"
           >
-            {/* {objectif} de votre Objectif */}
+            {objectif} de votre Objectif
           </text>
         </RadialBarChart>
       </ResponsiveContainer>
@@ -49,16 +54,18 @@ const GraphRadialProgress = ({user, getData}) => {
 
 };
 
-const mapStateToProps = (state) => {
-  return{
-    user : state.user
-  }
-}
+// const mapStateToProps = (state) => {
+//   return{
+//     user : state.user
+//   }
+// }
 
-const mapDispatchToProps = (dispatch) => {
-  return{
-    getData : () => dispatch(apiCallUser())
-  }
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return{
+//     getDataUser : () => dispatch(apiCallUser())
+//   }
+// }
 
-export default  connect(mapStateToProps, mapDispatchToProps)(GraphRadialProgress);
+// export default  connect(mapStateToProps, mapDispatchToProps)(GraphRadialProgress);
+
+export default GraphRadialProgress

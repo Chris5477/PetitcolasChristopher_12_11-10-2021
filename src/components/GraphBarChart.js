@@ -4,16 +4,29 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import { apiCallActivity } from "../redux/dataActivity/actionDataActivity";
 import "../styles/barChart.css";
 
-const GraphBarChart = ({ activity, getData }) => {
-  useEffect(() => {
-    getData();
-  }, [getData]);
+import {USER_ACTIVITY} from "../mock/mock_data"
+
+
+
+const GraphBarChart = (/*{ activity, getData }*/) => {
+
+const data = USER_ACTIVITY.sessions
+
+for (const index in data){
+  data[index].day = index
+}
+
+
+
+  // useEffect(() => {
+  //   getData();
+  // }, [getData]);
 
   return (
     <div className="bar-graphe">
       <ResponsiveContainer width={"100%"} height={"100%"}>
         <BarChart
-          data={activity}
+          data={data}
           margin={{
             top: 5,
             right: 30,
@@ -45,16 +58,17 @@ const GraphBarChart = ({ activity, getData }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    activity: state.activity,
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     activity: state.activity,
+//   };
+// };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getData: () => dispatch(apiCallActivity()),
-  };
-};
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     getData: () => dispatch(apiCallActivity()),
+//   };
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(GraphBarChart);
+// export default connect(mapStateToProps, mapDispatchToProps)(GraphBarChart);
+export default GraphBarChart

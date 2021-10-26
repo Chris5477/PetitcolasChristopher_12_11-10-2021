@@ -6,11 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Switch, Route} from "react-router-dom";
 import "./styles/global.css"
 
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Profil}></Route>
+
         <Route component={Error}></Route>
       </Switch>
     </BrowserRouter>

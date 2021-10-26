@@ -31,6 +31,7 @@ export const dataUserReducer = (state = dataStateUser, action) => {
                 error: action.payload
 
             }
+            
         default : return state
     }
 }
