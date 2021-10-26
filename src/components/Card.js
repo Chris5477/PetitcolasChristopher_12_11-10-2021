@@ -5,7 +5,7 @@ const Card = (props) => {
 
   return (
     <div className="card">
-      <img classname="icon-card" style={{ backgroundColor: props.color, padding: 15, borderRadius: "6px" }} src={props.img} alt="icon" />
+      <img className="icon-card" style={{ backgroundColor: props.color, padding: 15, borderRadius: "6px" }} src={props.img} alt="icon" />
       <div>
         <p className="indicator">
           {props.indicator}
