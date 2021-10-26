@@ -1,0 +1,27 @@
+.header {
+  grid-area: 2/2/3/4;
+  padding-left: 80px;
+  padding-top: 60px;
+}
+
+.name-user {
+  margin: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 48px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.name-user span {
+  color: #e60000;
+}
+
+.objectif {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 40px;
+}

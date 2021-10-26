@@ -1,0 +1,5 @@
+.container-graphes{
+    grid-area: 4/2/5/3;
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,21 +1,17 @@
 import React from "react";
-
 import { LineChart, Line, XAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
-import styled from "styled-components";
+import "../styles/LineGraphe.css"
 
-const StyleGraph2 = styled.div`
-  background-color: red;
-  width: 220px;
-  height: 220px;
-`;
 
 export const GraphLineChart = (props) => {
   const data = props.average[0].sessions;
 
   return (
-    <StyleGraph2>
-      <ResponsiveContainer minWidth="220px">
+    <div className="lineGraph">
+
+      <ResponsiveContainer width={"100%"} height={250}>
       <LineChart
+        
         data={data}
         margin={{
           top: 5,
@@ -25,12 +21,13 @@ export const GraphLineChart = (props) => {
         }}
         >
         <CartesianGrid horizontalPoints={[0, 0]} verticalPoints={[0, 0]} />
-        <XAxis dataKey="day" />
+        <XAxis dataKey="day" stroke="white"/>
         <Tooltip />
-        <Line width={220} height={220} type="monotone" dataKey="sessionLength" stroke="white" strokeWidth={3} activeDot={{ r: 8 }} dot={{ r: 0 }} />
+        <Line type="monotone" dataKey="sessionLength" stroke="white" strokeWidth={3} activeDot={{ r: 8 }} dot={{ r: 0 }} />
       </LineChart>
         </ResponsiveContainer>
-    </StyleGraph2>
+        </div>
+ 
   );
 };
 

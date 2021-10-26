@@ -1,0 +1,23 @@
+.nav-primary {
+  grid-area: 1/1/2/4;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+.list-link {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 160px;
+}
+
+ .link-nav-primary{
+  color: white;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+}

@@ -1,0 +1,30 @@
+.card {
+  width: 70%;
+  height: 120px;
+  margin: 25px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 24px;
+  font-family: Roboto;
+}
+
+.icon-card {
+  width: 60px;
+  height: 60px;
+}
+
+.indicator {
+  width: 150px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+}
+
+.category {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}

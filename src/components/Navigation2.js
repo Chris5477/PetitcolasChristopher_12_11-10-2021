@@ -1,47 +1,26 @@
 //IMPORT ALL DEPENDECIES
-import { Link } from "react-router-dom"
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+import "../styles/nav-secondary.css";
 
-// STYLE DIV TAG
-const Menu = styled.div`
-@media screen and (min-width: 1024px){
-  width: 91px;
-  display: flex;
-  flex-direction:column;
-  justify-content: space-between;
-  align-items: center;
-}
-`
-//STYLE COMPONENT REACT LINK
-const ContainerPicture = styled(Link)`
-@media screen and (min-width: 1024px){
-  margin-bottom: 20px;
-  background-color: white;
-  border-radius: 7px;
-}
-`
-//STYLE FOOTER TAG
-const Footer = styled.footer`
-@media screen and (min-width: 1024px){
-  color: #FFFFFF;
-  transform: rotateZ(-90deg);
-  width: 150px;
-  font-size: 12px;
-  position: absolute;
-  bottom:14%;
-}
-`
 //BUILD COMPONENT NAVIGATION2
 const Navigation2 = () => {
   return (
-    <div>
-      <Menu>
-        <ContainerPicture to="/"><img src="../assets/relax.png" alt="logo" /></ContainerPicture> 
-        <ContainerPicture to="/"><img src="../assets/swimmer.png" alt="logo" /></ContainerPicture> 
-        <ContainerPicture to="/"><img src="../assets/biker.png" alt="logo" /></ContainerPicture> 
-        <ContainerPicture to="/"><img src="..//assets/altere.png" alt="logo" /></ContainerPicture> 
-        <Footer>Copyright, SportSee 2020</Footer>
-      </Menu>
+    <div className="second-nav">
+      <ul className="list-link-navtwo">
+      <Link className="btn-navtwo" to="/">
+        <img src="../assets/relax.png" alt="logo" />
+      </Link>
+      <Link className="btn-navtwo" to="/">
+        <img src="../assets/swimmer.png" alt="logo" />
+      </Link>
+      <Link className="btn-navtwo" to="/">
+        <img src="../assets/biker.png" alt="logo" />
+      </Link>
+      <Link className="btn-navtwo" to="/">
+        <img src="../assets/altere.png" alt="logo" />
+      </Link>
+      </ul>
+      <footer>Copyright, SportSee 2020</footer>
     </div>
   );
 };

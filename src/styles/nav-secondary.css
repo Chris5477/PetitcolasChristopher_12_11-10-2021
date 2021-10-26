@@ -1,0 +1,34 @@
+.second-nav{
+   grid-area: 2/1/6/2;
+   background-color: black;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   padding-top: 200px;
+   position: relative;
+}
+
+.list-link-navtwo{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:0;
+}
+
+.list-link-navtwo img {
+    width: 64px;
+    height: 64px;
+}
+
+footer{
+    color: white;
+    transform: rotateZ(-90deg);
+    display: inline;
+    width: 180px;
+    position: absolute;
+    bottom: 15%;
+
+}

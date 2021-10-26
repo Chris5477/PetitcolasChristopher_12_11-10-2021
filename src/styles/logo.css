@@ -1,0 +1,18 @@
+.logo{
+    display: flex;
+    margin-left: 50px;
+
+}
+
+.picture-circle{
+    width: 57px;
+    height:57px;
+    border-radius: 50%;
+    background-color: #E60000;
+}
+
+.name-app{
+    color: #E60000;
+    font-size: 20px;
+    margin-left: 15px;
+}
