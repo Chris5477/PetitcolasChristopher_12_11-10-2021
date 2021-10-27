@@ -4,7 +4,7 @@ import "../styles/radialProgress.css";
 
 const GraphRadialProgress = ({ user }) => {
   // const objectif = user.user.data.todayScore * 100;
-  const objectif = null
+  const objectif = null;
 
   const data = [{ name: "Objectif", value: objectif }];
 

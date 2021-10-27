@@ -1,9 +1,8 @@
 import "../styles/header.css";
 
 const Header = ({ user }) => {
-
-  const data = user.user.data.userInfos.firstName
-  // const data = null
+  // const data = user.user.data.userInfos.firstName
+  const data = null;
 
   return (
     <header className="header">

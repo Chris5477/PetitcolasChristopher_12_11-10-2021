@@ -1,10 +1,9 @@
 import { LineChart, Line, XAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
 import "../styles/LineGraphe.css";
 
-export const GraphLineChart = ({average}) => {
-  
- const data = average.average.data.sessions
-//  const data = null 
+export const GraphLineChart = ({ average }) => {
+  //  const data = average.average.data.sessions
+  const data = null;
 
   return (
     <div className="lineGraph">

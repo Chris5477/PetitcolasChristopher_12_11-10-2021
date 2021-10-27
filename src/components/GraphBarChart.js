@@ -2,13 +2,13 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import "../styles/barChart.css";
 
 const GraphBarChart = ({ activity }) => {
-  const data = activity.activity.data.sessions;
+  // const data = activity.activity.data.sessions;
 
-  for (const index in data) {
-    data[index].day = index;
-  }
+  // for (const index in data) {
+  //   data[index].day = index;
+  // }
 
-  // const data = null
+  const data = null;
   return (
     <div className="bar-graphe">
       <ResponsiveContainer width={"100%"} height={"100%"}>

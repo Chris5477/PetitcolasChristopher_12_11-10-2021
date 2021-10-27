@@ -1,11 +1,16 @@
-import "../styles/card.css"
+import "../styles/card.css";
 
 const Card = (props) => {
   let unity = props.category === "calories" ? "Kcal" : "g";
 
   return (
     <div className="card">
-      <img className="icon-card" style={{ backgroundColor: props.color, padding: 15, borderRadius: "6px" }} src={props.img} alt="icon" />
+      <img
+        className="icon-card"
+        style={{ backgroundColor: props.color, padding: 15, borderRadius: "6px" }}
+        src={props.img}
+        alt="icon"
+      />
       <div>
         <p className="indicator">
           {props.indicator}

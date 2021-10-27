@@ -2,16 +2,16 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, LabelList } from "rechart
 import "../styles/radarGraphe.css";
 
 const GraphRadarChart = ({ performance }) => {
-  const data = performance.performance.data;
+  // const data = performance.performance.data;
 
-  const val = Object.values(data.kind);
+  // const val = Object.values(data.kind);
 
-  for (let key in data.data) {
-    data.data[key].kind = val[key];
-  }
+  // for (let key in data.data) {
+  //   data.data[key].kind = val[key];
+  // }
 
-  const dataGraphe = data.data
-  // const data = null
+  // const dataGraphe = data.data
+  const dataGraphe = null;
 
   return (
     <div className="radarGraphe">

@@ -1,14 +1,15 @@
-import { NavLink } from "react-router-dom";
-import "../styles/logo.css"
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+import "../styles/logo.css";
 
 const Logo = () => {
   return (
     <div className="logo">
-      <NavLink exact to="/">
+      <Link to="/">
         <div className="picture-circle">
-          <img src="assets/logo.png" alt="logo" />
+          <img src={logo} alt="logo" />
         </div>
-      </NavLink>
+      </Link>
 
       <h1 className="name-app">SportSee</h1>
     </div>
