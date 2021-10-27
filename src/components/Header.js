@@ -1,38 +1,18 @@
-import "../styles/header.css"
-import { useEffect } from "react";
-import { connect } from "react-redux";
-import { apiCallUser } from "../redux/dataUser/actionDataUser";
+import "../styles/header.css";
 
-//BUILD COMPONENT HEADER THAT RETRIEVES PROPS 
+const Header = ({ user }) => {
 
-const Header = ({user, getDataUser}) => {
- 
-  // const name = user.user.data.userInfos.firstName
-  
-  useEffect(() => {
-    getDataUser()
-  }, [getDataUser])
+  const data = user.user.data.userInfos.firstName
+  // const data = null
 
   return (
     <header className="header">
       <h2 className="name-user">
-        Bonjour <span>{}</span>
+        Bonjour <span>{data}</span>
       </h2>
       <p className="objectif">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
     </header>
   );
 };
 
-const mapStateToProps = (state) => {
-  return{
-    user : state.user
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return{
-    getDataUser : () => dispatch(apiCallUser())
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;

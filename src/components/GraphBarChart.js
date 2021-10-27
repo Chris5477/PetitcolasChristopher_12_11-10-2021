@@ -1,27 +1,14 @@
-import { useEffect } from "react";
-import { connect } from "react-redux";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
-import { apiCallActivity } from "../redux/dataActivity/actionDataActivity";
 import "../styles/barChart.css";
 
-import {USER_ACTIVITY} from "../mock/mock_data"
+const GraphBarChart = ({ activity }) => {
+  const data = activity.activity.data.sessions;
 
+  for (const index in data) {
+    data[index].day = index;
+  }
 
-
-const GraphBarChart = (/*{ activity, getData }*/) => {
-
-const data = USER_ACTIVITY.sessions
-
-for (const index in data){
-  data[index].day = index
-}
-
-
-
-  // useEffect(() => {
-  //   getData();
-  // }, [getData]);
-
+  // const data = null
   return (
     <div className="bar-graphe">
       <ResponsiveContainer width={"100%"} height={"100%"}>
@@ -58,17 +45,4 @@ for (const index in data){
   );
 };
 
-// const mapStateToProps = (state) => {
-//   return {
-//     activity: state.activity,
-//   };
-// };
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     getData: () => dispatch(apiCallActivity()),
-//   };
-// };
-
-// export default connect(mapStateToProps, mapDispatchToProps)(GraphBarChart);
-export default GraphBarChart
+export default GraphBarChart;

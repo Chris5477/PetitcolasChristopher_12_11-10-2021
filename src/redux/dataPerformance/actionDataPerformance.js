@@ -24,11 +24,11 @@ const errorGetDataPerformance = (error) => {
     }
 }
 
-export const apiCallPerformance = () => {
+export const apiCallPerformance = (id) => {
     return dispatch => {
         dispatch(loaderPerformance())
 
-        axios.get("http://localhost:3000/user/12/Performance")
+        axios.get(`http://localhost:3000/user/${id}/Performance`)
         .then(res => dispatch(getDataSuccessPerformance(res.data)))
         .catch(err => dispatch(errorGetDataPerformance(err.message)))
 

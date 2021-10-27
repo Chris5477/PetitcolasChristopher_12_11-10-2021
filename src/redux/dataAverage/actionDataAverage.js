@@ -23,12 +23,12 @@ const errorGetDataAverage = (error) => {
     }
 }
 
-export const apiCallAvarage = () => {
+export const apiCallAvarage = (id) => {
     return dispatch => {
 
         dispatch(loaderAverage())
 
-        axios.get("http://localhost:3000/user/12/average-sessions")
+        axios.get(`http://localhost:3000/user/${id}/average-sessions`)
         .then(res => dispatch(getDataSuccessAverage(res.data)))
         .catch(err => dispatch(errorGetDataAverage(err.message)))
     }

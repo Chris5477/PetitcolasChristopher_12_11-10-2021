@@ -8,21 +8,18 @@ import AllCards from "../components/AllCard";
 import { Provider } from "react-redux";
 import { store } from "../redux/store";
 import { USER_MAIN_DATA } from "../mock/mock_data";
+import ProfilContainer from "../components/profilContainer";
 
 const Profil = () => {
 
   return (
     <Provider store={store}>
-      <div className="profil-page">
-        <Navigation />
-        <Navigation2 />
-        <Header/>
-        <GraphBarChart />
-        <ContainerGraphs />
-        <AllCards userData={USER_MAIN_DATA} />
-      </div>
+      <ProfilContainer />
     </Provider>
   );
 };
 
+
+
 export default Profil;
+

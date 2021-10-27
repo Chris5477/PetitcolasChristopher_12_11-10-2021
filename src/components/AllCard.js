@@ -2,9 +2,9 @@ import Card from "./Card";
 import "../styles/allCards.css"
 
 
-const AllCards = (props) => {
+const AllCards = ({user}) => {
 
-const { calorieCount, proteinCount, carbohydrateCount, lipidCount } = props.userData[0].keyData
+const { calorieCount, proteinCount, carbohydrateCount, lipidCount } = user.user.data.keyData
 
   return (
     <div className="container-cards">

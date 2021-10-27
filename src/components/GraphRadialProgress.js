@@ -1,21 +1,10 @@
-import { useEffect } from "react";
-import { connect } from "react-redux";
 import { RadialBarChart, PolarAngleAxis, ResponsiveContainer, RadialBar } from "recharts";
-import { apiCallUser } from "../redux/dataUser/actionDataUser";
+
 import "../styles/radialProgress.css";
-import { USER_MAIN_DATA } from "../mock/mock_data";
 
-const GraphRadialProgress = (/*{user, getDataUser}*/) => {
-
-  const objectif = USER_MAIN_DATA[0].todayScore * 100
-
- 
-
-  // useEffect(() => {
-  //   getDataUser()
-  // },[getDataUser])
-  
-  // const objectif = user.user.data.todayScore * 100 ;
+const GraphRadialProgress = ({ user }) => {
+  // const objectif = user.user.data.todayScore * 100;
+  const objectif = null
 
   const data = [{ name: "Objectif", value: objectif }];
 
@@ -50,22 +39,6 @@ const GraphRadialProgress = (/*{user, getDataUser}*/) => {
       </ResponsiveContainer>
     </div>
   );
-
-
 };
 
-// const mapStateToProps = (state) => {
-//   return{
-//     user : state.user
-//   }
-// }
-
-// const mapDispatchToProps = (dispatch) => {
-//   return{
-//     getDataUser : () => dispatch(apiCallUser())
-//   }
-// }
-
-// export default  connect(mapStateToProps, mapDispatchToProps)(GraphRadialProgress);
-
-export default GraphRadialProgress
+export default GraphRadialProgress;

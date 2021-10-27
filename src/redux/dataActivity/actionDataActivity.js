@@ -23,11 +23,11 @@ const errorGetDataActivity = (error) => {
     }
 }
 
-export const apiCallActivity = () => {
+export const apiCallActivity = (id) => {
     return dispatch => {
         dispatch(loaderActivity())
 
-        axios.get("http://localhost:3000/user/12/activity")
+        axios.get(`http://localhost:3000/user/${id}/activity`)
         .then(res => dispatch(getDataSuccessActivity(res.data)))
         .catch(err => dispatch(errorGetDataActivity(err.message)))
 

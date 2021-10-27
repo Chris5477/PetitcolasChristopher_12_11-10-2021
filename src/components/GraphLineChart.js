@@ -1,19 +1,10 @@
-import { useEffect } from "react";
-import { connect } from "react-redux";
-import { apiCallAvarage } from "../redux/dataAverage/actionDataAverage";
 import { LineChart, Line, XAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
 import "../styles/LineGraphe.css";
-import GraphBarChart from "./GraphBarChart";
-import { USER_AVERAGE_SESSIONS } from "../mock/mock_data";
 
-export const GraphLineChart = (/*{average, getDataAverage}*/) => {
-  const data = USER_AVERAGE_SESSIONS[0].sessions
- 
-
-  // useEffect(() => {
-  //   getDataAverage()
-
-  // },[getDataAverage])
+export const GraphLineChart = ({average}) => {
+  
+ const data = average.average.data.sessions
+//  const data = null 
 
   return (
     <div className="lineGraph">
@@ -22,8 +13,8 @@ export const GraphLineChart = (/*{average, getDataAverage}*/) => {
           data={data}
           margin={{
             top: 5,
-            right: 10,
-            left: 5,
+            right: 0,
+            left: 0,
             bottom: 10,
           }}
         >
@@ -44,17 +35,4 @@ export const GraphLineChart = (/*{average, getDataAverage}*/) => {
   );
 };
 
-// const mapStateToProps = state => {
-//   return{
-//     average : state.average
-//   }
-// }
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     getDataAverage : () => dispatch(apiCallAvarage())
-//   }
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps )(GraphLineChart);
 export default GraphLineChart;
