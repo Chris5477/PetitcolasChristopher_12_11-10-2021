@@ -1,5 +1,6 @@
 import "../styles/home.css";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png"
 
 const Home = () => {
   return (
@@ -7,7 +8,7 @@ const Home = () => {
       <div className="container-home">
         <div className="first-half">
           <div className="logo-home">
-            <img src="assets/logo.png" alt="logo" />
+            <img src={logo} alt="logo" />
           </div>
           <h1 className="title-home">Sportsee</h1>
         </div>

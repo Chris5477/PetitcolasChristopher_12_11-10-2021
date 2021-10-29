@@ -13,15 +13,19 @@ body {
 
 
 .spinner{
-  width: 100px;
-  height: 100px;
-  border-top: 5px solid black;
-  border-bottom: 5px solid #E60000;
+  width: 250px;
+  height: 250px;
+  border-top: 15px solid black;
+  border-bottom: 15px solid #E60000;
   animation-name: loading;
-  animation-duration: 0.3s;
+  animation-duration: 0.2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   border-radius: 50%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform : translate(-50%,-50%);
 }
 
 @keyframes loading {

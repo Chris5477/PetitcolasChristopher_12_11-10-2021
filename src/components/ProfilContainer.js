@@ -30,38 +30,23 @@ const ProfilContainer = ({
     getDataPerformance(id);
   }, []);
 
-  const dataHeader = user.isLoading ? (
-    <div className="spinner"></div>
-  ) : user.error ? (
-    <p>ERROR</p>
-  ) : (
-    user.user && <Header user={user} />
-  );
-
-  const dataBar = activity.isLoading ? (
-    <div className="spinner"></div>
-  ) : activity.error ? (
-    <p>ERROR</p>
-  ) : (
-    activity.activity && <GraphBarChart activity={activity} />
-  );
-
-  const dataOtherGraph = user.isLoading ? (
-    <div className="spinner"></div>
-  ) : user.error ? (
-    <p>ERROR</p>
-  ) : (
-    user.user && <AllCards user={user} />
-  );
+  const aaa =
+    user.isLoading || activity.isLoading || average.isLoading || performance.isLoading ? (
+      <div className="spinner"></div>
+    ) : (
+      <>
+        <Header user={user} />
+        <GraphBarChart activity={activity} />
+        <ContainerGraphs user={user} average={average} performance={performance} />
+        <AllCards user={user} />
+      </>
+    );
 
   return (
     <div className="profil-page">
       <Navigation />
       <Navigation2 />
-      {dataHeader}
-      {dataBar}
-      <ContainerGraphs user={user} average={average} performance={performance} />
-      {dataOtherGraph}
+      {aaa}
     </div>
   );
 };

@@ -51,7 +51,7 @@
     align-items:center;
 }
 
-link-home{
+.link-home{
     background-color: white;
     color: red;
     font-size: 30px;
@@ -60,7 +60,7 @@ link-home{
     padding: 30px 50px;
 }
 
-link-home:hover{
+.link-home:hover{
     background-color: black;
     transition: 0.7s;
 }

@@ -5,3 +5,7 @@
     grid-template-columns: 130px 70% 22%;
     grid-template-rows: 81px 20% repeat(2, 32%) 71px;
 }
+
+.profil-container{
+    position: relative;
+}

@@ -3,8 +3,7 @@ import { RadialBarChart, PolarAngleAxis, ResponsiveContainer, RadialBar } from "
 import "../styles/radialProgress.css";
 
 const GraphRadialProgress = ({ user }) => {
-  // const objectif = user.user.data.todayScore * 100;
-  const objectif = null;
+  const objectif = user.user.data != null ? user.user.data.score * 100 : null;
 
   const data = [{ name: "Objectif", value: objectif }];
 
@@ -33,7 +32,7 @@ const GraphRadialProgress = ({ user }) => {
             dominantBaseline="middle"
             className="progress-label"
           >
-            {objectif} de votre Objectif
+            {objectif}% de votre Objectif
           </text>
         </RadialBarChart>
       </ResponsiveContainer>

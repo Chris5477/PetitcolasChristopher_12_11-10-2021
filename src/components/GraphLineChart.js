@@ -2,9 +2,8 @@ import { LineChart, Line, XAxis, Tooltip, CartesianGrid, ResponsiveContainer } f
 import "../styles/LineGraphe.css";
 
 export const GraphLineChart = ({ average }) => {
-  //  const data = average.average.data.sessions
-  const data = null;
-
+   const data = average.average.data != null ? average.average.data.sessions : null
+ 
   return (
     <div className="lineGraph">
       <ResponsiveContainer width={"100%"} height={250}>

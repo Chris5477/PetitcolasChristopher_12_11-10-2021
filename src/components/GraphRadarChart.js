@@ -2,27 +2,27 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, LabelList } from "rechart
 import "../styles/radarGraphe.css";
 
 const GraphRadarChart = ({ performance }) => {
-  // const data = performance.performance.data;
+  const getData = (dataGraphe) => {
+    const val = Object.values(dataGraphe.kind);
 
-  // const val = Object.values(data.kind);
+    for (let key in dataGraphe.data) {
+      dataGraphe.data[key].kind = val[key];
+    }
+    return dataGraphe;
+  };
 
-  // for (let key in data.data) {
-  //   data.data[key].kind = val[key];
-  // }
+  const data = performance.performance.data != null ? getData(performance.performance.data) : null;
 
-  // const dataGraphe = data.data
-  const dataGraphe = null;
-
-  return (
+  return data != null ? (
     <div className="radarGraphe">
-      <RadarChart width={250} height={250} cx={125} cy={125} outerRadius={80} data={dataGraphe}>
+      <RadarChart width={250} height={250} cx={125} cy={125} outerRadius={80} data={data.data}>
         <PolarGrid />
         <PolarAngleAxis dataKey="kind" stroke={"white"} />
         <Radar dataKey="value" stroke="red" fill="red" fillOpacity={0.7} />
         <LabelList color="white" />;
       </RadarChart>
     </div>
-  );
+  ) : null;
 };
 
 export default GraphRadarChart;
