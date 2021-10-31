@@ -1,5 +1,6 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import "../styles/barChart.css";
+import Proptypes from "prop-types"
 
 const GraphBarChart = ({ activity }) => {
   const data = activity.activity.data ? activity.activity.data.sessions : null
@@ -44,5 +45,9 @@ const GraphBarChart = ({ activity }) => {
     </div>
   );
 };
+
+GraphBarChart.propTypes = {
+  activity: Proptypes.object.isRequired
+}
 
 export default GraphBarChart;

@@ -1,5 +1,8 @@
 import { LineChart, Line, XAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
 import "../styles/LineGraphe.css";
+import Proptypes from "prop-types"
+
+
 
 export const GraphLineChart = ({ average }) => {
    const data = average.average.data != null ? average.average.data.sessions : null
@@ -32,5 +35,9 @@ export const GraphLineChart = ({ average }) => {
     </div>
   );
 };
+
+GraphLineChart.propTypes={
+ average: Proptypes.object.isRequired
+}
 
 export default GraphLineChart;

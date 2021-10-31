@@ -1,4 +1,5 @@
 import "../styles/card.css";
+import PropTypes from "prop-types";
 
 const Card = (props) => {
   let unity = props.category === "calories" ? "Kcal" : "g";
@@ -20,5 +21,12 @@ const Card = (props) => {
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  img: PropTypes.string.isRequired,
+  indicator: PropTypes.number.isRequired,
+  category: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
 };
 export default Card;

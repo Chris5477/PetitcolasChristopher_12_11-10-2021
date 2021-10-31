@@ -1,4 +1,5 @@
 import "../styles/header.css";
+import Proptypes from "prop-types"
 
 const Header = ({ user }) => {
 
@@ -16,5 +17,9 @@ const Header = ({ user }) => {
     
   );
 };
+
+Header.propTypes={
+  user: Proptypes.object.isRequired
+}
 
 export default Header;

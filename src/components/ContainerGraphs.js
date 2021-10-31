@@ -2,8 +2,10 @@ import GraphLineChart from "./GraphLineChart";
 import GraphRadarChart from "./GraphRadarChart";
 import "../styles/containerGraphes.css";
 import GraphRadialProgress from "./GraphRadialProgress";
+import Proptypes from "prop-types"
 
 const ContainerGraphs = ({ user, average, performance }) => {
+
   
   return (
     <div className="container-graphes">
@@ -13,5 +15,12 @@ const ContainerGraphs = ({ user, average, performance }) => {
     </div>
   );
 };
+
+ContainerGraphs.propTypes = {
+  user : Proptypes.object.isRequired,
+  average : Proptypes.object.isRequired,
+  performance: Proptypes.object.isRequired
+}
+
 
 export default ContainerGraphs;

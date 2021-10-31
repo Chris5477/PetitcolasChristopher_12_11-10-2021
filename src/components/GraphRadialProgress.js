@@ -1,12 +1,12 @@
 import { RadialBarChart, PolarAngleAxis, ResponsiveContainer, RadialBar } from "recharts";
-
 import "../styles/radialProgress.css";
+import Proptypes from "prop-types"
 
 const GraphRadialProgress = ({ user }) => {
-  const objectif = user.user.data != null ? user.user.data.score * 100 : null;
-
+  const objectif = user.user.data != null ? user.user.data.todayScore * 100 : null;
+  
   const data = [{ name: "Objectif", value: objectif }];
-
+  
   const circleSize = 250;
   return (
     <div className="radial-graphe">
@@ -22,7 +22,7 @@ const GraphRadialProgress = ({ user }) => {
           data={data}
           startAngle={230}
           endAngle={-130}
-        >
+          >
           <PolarAngleAxis type="number" domain={[0, 100]} angleAxisId={0} tick={false} />
           <RadialBar background clockWise dataKey="value" cornerRadius={circleSize / 2} fill="red" />
           <text
@@ -31,7 +31,7 @@ const GraphRadialProgress = ({ user }) => {
             textAnchor="middle"
             dominantBaseline="middle"
             className="progress-label"
-          >
+            >
             {objectif}% de votre Objectif
           </text>
         </RadialBarChart>
@@ -39,5 +39,9 @@ const GraphRadialProgress = ({ user }) => {
     </div>
   );
 };
+
+GraphRadialProgress.propTypes={
+  user: Proptypes.object.isRequired
+}
 
 export default GraphRadialProgress;

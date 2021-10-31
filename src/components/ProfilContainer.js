@@ -11,6 +11,9 @@ import { apiCallAvarage } from "../redux/dataAverage/actionDataAverage";
 import { apiCallUser } from "../redux/dataUser/actionDataUser";
 import { apiCallActivity } from "../redux/dataActivity/actionDataActivity";
 import { apiCallPerformance } from "../redux/dataPerformance/actionDataPerformance";
+import Proptypes from "prop-types"
+
+
 
 const ProfilContainer = ({
   id,
@@ -68,5 +71,18 @@ const mapDispatchToProps = (dispatch) => {
     getDataPerformance: (id) => dispatch(apiCallPerformance(id)),
   };
 };
+
+ProfilContainer.propTypes={
+  id: Proptypes.string.isRequired,
+  user: Proptypes.object.isRequired,
+  activity: Proptypes.object.isRequired,
+  average: Proptypes.object.isRequired,
+  performance: Proptypes.object.isRequired,
+  getDataUser: Proptypes.func.isRequired,
+  getDataActivity: Proptypes.func.isRequired,
+  getDataAverage: Proptypes.func.isRequired,
+  getDataPerformance: Proptypes.func.isRequired,
+
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProfilContainer);

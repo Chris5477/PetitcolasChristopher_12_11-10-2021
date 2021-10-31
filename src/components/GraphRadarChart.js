@@ -1,5 +1,6 @@
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, LabelList } from "recharts";
 import "../styles/radarGraphe.css";
+import Proptypes from "prop-types";
 
 const GraphRadarChart = ({ performance }) => {
   const getData = (dataGraphe) => {
@@ -23,6 +24,9 @@ const GraphRadarChart = ({ performance }) => {
       </RadarChart>
     </div>
   ) : null;
+};
+GraphRadarChart.propTypes = {
+  performance: Proptypes.object.isRequired,
 };
 
 export default GraphRadarChart;
