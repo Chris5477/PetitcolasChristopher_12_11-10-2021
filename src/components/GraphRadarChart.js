@@ -1,4 +1,4 @@
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, LabelList, ResponsiveContainer } from "recharts";
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, LabelList } from "recharts";
 import "../styles/radarGraphe.css";
 import Proptypes from "prop-types";
 

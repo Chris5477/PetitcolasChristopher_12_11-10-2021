@@ -16,11 +16,12 @@ Sportsee allows to users offers the possibility to see the fruit of their effort
 
 # Summary 
 
-## Use project
-### use APi
-#### example use API
-##### Reacharts
+Use project
+Use APi
+Example use API
+Reacharts
 
+# Start to use project 
 
 ## `yarn start`
 
@@ -56,26 +57,26 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 
-### Use API
+# Use API
 
 This project SportSee use an Api to render the profil user pages, you need to download or clone a repository. You can acces on this repository on the next url : [https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard]
 
     Fork the repository
     Clone it on your computer.
 
-### Launch API
+## Launch API
 
 To be able to use API whitin project , open a terminal and access to repository's API
 
-### Yarn
+## Yarn
 
 this command will allows you to install the dependencies
 
-### Yarn dev
+## Yarn dev
 
 This command will allows you to open a servor on port 3000 . once this command has been executed, you can access of routes' APi
 
-#### Endpoints
+## Endpoints
 
 The project includes four endpoints for request API
 
@@ -89,7 +90,7 @@ The project includes four endpoints for request API
 
 CAUTION : actually , there are only 2 users ( user's id 12 and user's id 18 )
 
-#### Example Request `axios`
+## Example Request `axios`
 
 axios.get("http://localhost:3000/user/12")
 .then(response => console.log(response.data))
@@ -116,7 +117,7 @@ axios.get("http://localhost:3000/user/12")
 
 
 
-#### Example Request `fetch`
+## Example Request `fetch`
 
 const request = fecth("http://localhost:3000/user/${userId}/performance")
 .then(response => response.json())
@@ -165,7 +166,7 @@ const request = fecth("http://localhost:3000/user/${userId}/performance")
   }
     **For more information, to consult file README.md of repository of API**
 
- ##### Recharts
+ # Recharts
 
  This project use library's Recharts to make all graphics . You can visit the site : [https://recharts.org/] for more information
 

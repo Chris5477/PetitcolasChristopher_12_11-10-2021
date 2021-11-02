@@ -1,4 +1,4 @@
-import { RadialBarChart, PolarAngleAxis, ResponsiveContainer, RadialBar } from "recharts";
+import { RadialBarChart, PolarAngleAxis, RadialBar } from "recharts";
 import "../styles/radialProgress.css";
 import Proptypes from "prop-types";
 
