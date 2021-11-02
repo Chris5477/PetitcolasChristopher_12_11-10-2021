@@ -1,5 +1,5 @@
 .nav-primary {
-  grid-area: 1/1/2/4;
+  grid-area: 1/1/2/6;
   background-color: black;
   display: flex;
   align-items: center;
@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-left: 160px;
+  padding-left: 10px;
 }
 
 .link-nav-primary {

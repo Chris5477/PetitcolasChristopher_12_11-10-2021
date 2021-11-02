@@ -25,13 +25,14 @@ const ProfilContainer = ({
   getDataPerformance,
 }) => {
   /* To do requests api in terms of id user */
+  const widthDevice = window.innerWidth <= 1281 ? 180 : 300;
 
   useEffect(() => {
     getDataUser(id);
     getDataActivity(id);
     getDataAverage(id);
     getDataPerformance(id);
-  }, []);
+  }, [id, getDataUser, getDataActivity, getDataAverage, getDataPerformance]);
 
   const responseCallsApi =
     user.isLoading || activity.isLoading || average.isLoading || performance.isLoading ? (
@@ -40,7 +41,7 @@ const ProfilContainer = ({
       <>
         <Header user={user} />
         <GraphBarChart activity={activity} />
-        <ContainerGraphs user={user} average={average} performance={performance} />
+        <ContainerGraphs user={user} average={average} performance={performance} device={widthDevice} />
         <ContainerCard user={user} />
       </>
     );

@@ -13,14 +13,14 @@ const GraphBarChart = ({ activity }) => {
 
   return (
     <div className="bar-graphe">
-      <ResponsiveContainer width={"100%"} height={"100%"}>
+      <ResponsiveContainer width={"100%"} height={"90%"}>
         <BarChart
           data={activityUser}
           margin={{
-            top: 40,
-            right: 30,
-            left: 80,
-            bottom: 20,
+            top: 20,
+            right: 0,
+            left: 0,
+            bottom: 0,
           }}
         >
           <CartesianGrid verticalPoints={[3, 3]} />
@@ -37,18 +37,18 @@ const GraphBarChart = ({ activity }) => {
               fontWeight: 500,
               textAlign: "center",
               width: "39px",
-              height: "64 px",
+              height: "64px",
             }}
           />
 
           <Legend
-            wrapperStyle={{ right: 50, top: 0 }}
+            wrapperStyle={{ right: 50, top: -5 }}
             iconType={"circle"}
             iconSize={7}
             align={"right"}
             verticalAlign={"top"}
           />
-          <text x={100} y={20} fontSize={20}>
+          <text x={10} y={15}  fontSize={20}>
             Activité quotidienne
           </text>
 

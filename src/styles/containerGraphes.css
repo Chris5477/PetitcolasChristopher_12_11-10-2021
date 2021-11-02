@@ -1,5 +1,5 @@
 .container-graphes {
-  grid-area: 4/2/5/3;
+  grid-area: 4/3/5/4;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between
 }

@@ -1,11 +1,11 @@
-.profil-page {
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 130px 70% 22%;
-  grid-template-rows: 81px 20% repeat(2, 32%) 71px;
+.profil-page{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 130px 6% 58% 21% 8%;
+    grid-template-rows: 8vh 24vh repeat(2, 30vh) 8vh;
 }
 
-.profil-container {
-  position: relative;
+.profil-container{
+    position: relative;
 }

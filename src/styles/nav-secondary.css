@@ -13,10 +13,12 @@
   height: 40vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 0;
 }
+
+
 
 .list-link-navtwo img {
   width: 64px;
@@ -29,5 +31,5 @@ footer {
   display: inline;
   width: 180px;
   position: absolute;
-  bottom: 15%;
+  bottom: 16%;
 }

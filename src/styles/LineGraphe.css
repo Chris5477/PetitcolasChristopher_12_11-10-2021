@@ -1,5 +1,12 @@
-.lineGraph {
-  background-color: red;
-  width: 250px;
-  height: 250px;
+.lineGraph{
+    background-color: red;
+    width: 180px;
+    height: 180px;
+}
+
+@media screen and (min-width:1281px){
+    .lineGraph{
+        width: 300px;
+        height: 300px;
+    }
 }

@@ -2,22 +2,23 @@ import { RadialBarChart, PolarAngleAxis, ResponsiveContainer, RadialBar } from "
 import "../styles/radialProgress.css";
 import Proptypes from "prop-types";
 
-const GraphRadialProgress = ({ user }) => {
+const GraphRadialProgress = ({ user, deviceGraph }) => {
   const objectifUser = user.user.data != null ? user.user.data.todayScore * 100 : null;
 
   const dataScore = [{ name: "Objectif", value: objectifUser }];
 
-  const circleSize = 250;
+ 
+
+  const circleSize = deviceGraph;
   return (
     <div className="radial-graphe">
-      <ResponsiveContainer>
         <RadialBarChart
           width={circleSize}
           height={circleSize}
           cx={circleSize / 2}
           cy={circleSize / 2}
-          innerRadius={90}
-          outerRadius={120}
+          innerRadius={circleSize - circleSize / 2}
+          outerRadius={circleSize / 2 - 10}
           barSize={10}
           data={dataScore}
           startAngle={230}
@@ -35,13 +36,13 @@ const GraphRadialProgress = ({ user }) => {
             {objectifUser}% de votre Objectif
           </text>
         </RadialBarChart>
-      </ResponsiveContainer>
     </div>
   );
 };
 
 GraphRadialProgress.propTypes = {
   user: Proptypes.object.isRequired,
+  deviceGraph : Proptypes.number.isRequired
 };
 
 export default GraphRadialProgress;

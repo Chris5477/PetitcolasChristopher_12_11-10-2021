@@ -1,8 +1,8 @@
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, LabelList } from "recharts";
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, LabelList, ResponsiveContainer } from "recharts";
 import "../styles/radarGraphe.css";
 import Proptypes from "prop-types";
 
-const GraphRadarChart = ({ performance }) => {
+const GraphRadarChart = ({ performance, deviceGraph }) => {
   /**
    * method changes object data to format require by Rechart to make un radarChart
    * @param {object} dataRadarGraph
@@ -22,9 +22,16 @@ const GraphRadarChart = ({ performance }) => {
 
   return performanceUser != null ? (
     <div className="radarGraphe">
-      <RadarChart width={250} height={250} cx={125} cy={125} outerRadius={80} data={performanceUser.data}>
+      <RadarChart
+        width={deviceGraph}
+        height={deviceGraph}
+        cx={deviceGraph / 2}
+        cy={deviceGraph / 2}
+        outerRadius={deviceGraph / 3}
+        data={performanceUser.data}
+      >
         <PolarGrid />
-        <PolarAngleAxis dataKey="kind" stroke={"white"} />
+        <PolarAngleAxis dataKey="kind" stroke={"white"} fontSize="14px" />
         <Radar dataKey="value" stroke="red" fill="red" fillOpacity={0.7} />
         <LabelList color="white" />;
       </RadarChart>
@@ -33,6 +40,7 @@ const GraphRadarChart = ({ performance }) => {
 };
 GraphRadarChart.propTypes = {
   performance: Proptypes.object.isRequired,
+  deviceGraph: Proptypes.number.isRequired,
 };
 
 export default GraphRadarChart;

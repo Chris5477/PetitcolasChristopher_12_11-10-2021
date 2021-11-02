@@ -11,7 +11,7 @@ import "../styles/nav-secondary.css";
 const Navigation2 = () => {
   return (
     <div className="second-nav">
-      <ul className="list-ldink-navtwo">
+      <ul className="list-link-navtwo">
         <Link className="btn-navtwo" to="/profil/:id">
           <img src={relax} alt="logo" />
         </Link>
