@@ -4,9 +4,9 @@ import calories from "../assets/calorie.png";
 import protien from "../assets/proteine.png";
 import apple from "../assets/apple.svg";
 import lipide from "../assets/cheeseburger.svg";
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
-const AllCards = ({ user }) => {
+const ContainerCard = ({ user }) => {
   const data = user.user.data != null ? user.user.data.keyData : null;
 
   return data != null ? (
@@ -19,8 +19,8 @@ const AllCards = ({ user }) => {
   ) : null;
 };
 
-AllCards.propTypes = {
-  user: PropTypes.object.isRequired
-}
+ContainerCard.propTypes = {
+  user: PropTypes.object.isRequired,
+};
 
-export default AllCards;
+export default ContainerCard;

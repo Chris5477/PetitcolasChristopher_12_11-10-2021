@@ -3,20 +3,26 @@ import "../styles/radarGraphe.css";
 import Proptypes from "prop-types";
 
 const GraphRadarChart = ({ performance }) => {
-  const getData = (dataGraphe) => {
-    const val = Object.values(dataGraphe.kind);
+  /**
+   * method changes object data to format require by Rechart to make un radarChart
+   * @param {object} dataRadarGraph
+   * @returns new object
+   */
 
-    for (let key in dataGraphe.data) {
-      dataGraphe.data[key].kind = val[key];
+  const getData = (dataRadarGraph) => {
+    const val = Object.values(dataRadarGraph.kind);
+
+    for (let key in dataRadarGraph.data) {
+      dataRadarGraph.data[key].kind = val[key];
     }
-    return dataGraphe;
+    return dataRadarGraph;
   };
 
-  const data = performance.performance.data != null ? getData(performance.performance.data) : null;
+  const performanceUser = performance.performance.data != null ? getData(performance.performance.data) : null;
 
-  return data != null ? (
+  return performanceUser != null ? (
     <div className="radarGraphe">
-      <RadarChart width={250} height={250} cx={125} cy={125} outerRadius={80} data={data.data}>
+      <RadarChart width={250} height={250} cx={125} cy={125} outerRadius={80} data={performanceUser.data}>
         <PolarGrid />
         <PolarAngleAxis dataKey="kind" stroke={"white"} />
         <Radar dataKey="value" stroke="red" fill="red" fillOpacity={0.7} />

@@ -1,19 +1,17 @@
 import { LineChart, Line, XAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
 import "../styles/LineGraphe.css";
-import Proptypes from "prop-types"
-
-
+import Proptypes from "prop-types";
 
 export const GraphLineChart = ({ average }) => {
-   const data = average.average.data != null ? average.average.data.sessions : null
- 
+  const averageUser = average.average.data != null ? average.average.data.sessions : null;
+
   return (
     <div className="lineGraph">
       <ResponsiveContainer width={"100%"} height={250}>
         <LineChart
-          data={data}
+          data={averageUser}
           margin={{
-            top: 5,
+            top: 50,
             right: 0,
             left: 0,
             bottom: 10,
@@ -21,7 +19,10 @@ export const GraphLineChart = ({ average }) => {
         >
           <CartesianGrid horizontalPoints={[0, 0]} verticalPoints={[0, 0]} />
           <XAxis dataKey="day" stroke="white" />
-          <Tooltip />
+          <Tooltip itemStyle={{ width: "39px", height: "15px" }} />
+          <text x={15} y={20} fontSize={18} fill="white">
+            Durée moyenne des sessions
+          </text>
           <Line
             type="monotone"
             dataKey="sessionLength"
@@ -36,8 +37,8 @@ export const GraphLineChart = ({ average }) => {
   );
 };
 
-GraphLineChart.propTypes={
- average: Proptypes.object.isRequired
-}
+GraphLineChart.propTypes = {
+  average: Proptypes.object.isRequired,
+};
 
 export default GraphLineChart;

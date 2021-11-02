@@ -1,23 +1,23 @@
 import "../styles/card.css";
 import PropTypes from "prop-types";
 
-const Card = (props) => {
-  let unity = props.category === "calories" ? "Kcal" : "g";
+const Card = ({ img, indicator, category, color }) => {
+  let unityWeight = category === "calories" ? "Kcal" : "g";
 
   return (
     <div className="card">
       <img
         className="icon-card"
-        style={{ backgroundColor: props.color, padding: 15, borderRadius: "6px" }}
-        src={props.img}
+        style={{ backgroundColor: color, padding: 15, borderRadius: "6px" }}
+        src={img}
         alt="icon"
       />
       <div>
         <p className="indicator">
-          {props.indicator}
-          {unity}
+          {indicator}
+          {unityWeight}
         </p>
-        <p className="category">{props.category}</p>
+        <p className="category">{category}</p>
       </div>
     </div>
   );

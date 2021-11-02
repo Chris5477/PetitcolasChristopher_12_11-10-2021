@@ -3,8 +3,6 @@ import Logo from "./Logo";
 import { Link } from "react-router-dom";
 import "../styles/nav-primary.css";
 
-//BUILD COMPONENT NAVIGATION
-// USE LINK FOR THE NAVIGATION , KEY-WORD TO REDIRECT USER , TO SET THE PATH
 const Navigation = () => {
   return (
     <nav className="nav-primary">

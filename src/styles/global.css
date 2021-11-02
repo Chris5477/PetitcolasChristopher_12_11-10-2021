@@ -11,29 +11,28 @@ body {
   text-decoration: none;
 }
 
-
-.spinner{
+.spinner {
   width: 200px;
   height: 200px;
   border-top: 15px solid black;
-  border-bottom: 15px solid #E60000;
+  border-bottom: 15px solid #e60000;
   animation-name: loading;
   animation-duration: 0.7s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite ;
+  animation-iteration-count: infinite;
   border-radius: 50%;
   position: absolute;
-  top:50%;
-  left:50%;
-  transform : translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes loading {
-  from{
-      transform: rotateZ(0deg);
+  from {
+    transform: rotateZ(0deg);
   }
 
-  to{
-      transform: rotateZ(360deg);
+  to {
+    transform: rotateZ(360deg);
   }
 }
