@@ -2,6 +2,7 @@
     background-color: black;
     width: 180px;
     height: 180px;
+    border-radius: 5px;
 }
 
 @media screen and (min-width:1281px) and (max-width : 1481px){

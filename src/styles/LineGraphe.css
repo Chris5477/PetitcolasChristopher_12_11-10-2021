@@ -2,8 +2,19 @@
     background-color: red;
     width: 180px;
     height: 180px;
+    position: relative;
+    border-radius: 5px;
 }
 
+.name-line{
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top:10%;
+    left:10%;
+    right: 15%;
+    
+}
 @media screen and (min-width:1281px) and (max-width : 1481px){
     .lineGraph{
         width: 240px;

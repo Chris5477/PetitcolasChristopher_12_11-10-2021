@@ -29,9 +29,9 @@ const GraphBarChart = ({ activity }) => {
         <BarChart
           data={activityUser}
           margin={{
-            top: 20,
-            right: 0,
-            left: 0,
+            top: 40,
+            right: 20,
+            left: 20,
             bottom: 0,
           }}
         >
@@ -54,13 +54,13 @@ const GraphBarChart = ({ activity }) => {
           />
 
           <Legend
-            wrapperStyle={{ right: 50, top: -5 }}
+            wrapperStyle={{ right: 50, top: 10 }}
             iconType={"circle"}
             iconSize={7}
             align={"right"}
             verticalAlign={"top"}
           />
-          <text x={10} y={15} fontSize={20}>
+          <text x={10} y={30} fontSize={20}>
             Activité quotidienne
           </text>
 

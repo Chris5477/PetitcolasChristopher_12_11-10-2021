@@ -1,3 +1,5 @@
 .bar-graphe {
   grid-area: 3/3/4/4;
+  background-color: #FBFBFB;
+  border-radius: 5px;
 }

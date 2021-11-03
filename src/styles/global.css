@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 100vh;
+  font-family: 'robotoregular';
 }
 
 * {
@@ -35,4 +36,14 @@ body {
   to {
     transform: rotateZ(360deg);
   }
+}
+
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url('../font/roboto-regular-webfont.woff2') format('woff2'),
+       url('../font/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }

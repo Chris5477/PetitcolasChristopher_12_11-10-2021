@@ -5,11 +5,11 @@
 
 .name-user {
   margin: 0;
-  font-family: "Roboto";
   font-style: normal;
   font-size: 48px;
   line-height: 24px;
-  font-weight: 500;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .name-user span {
@@ -17,7 +17,6 @@
 }
 
 .objectif {
-  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

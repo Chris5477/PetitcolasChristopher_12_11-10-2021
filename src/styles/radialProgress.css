@@ -1,6 +1,22 @@
 .radial-graphe{
     width: 180px;
     height: 180px;
+    position: relative;
+    background-color: #FBFBFB;
+    border-radius: 5px;
+}
+
+.objectif-in-progress{
+    position: absolute;
+    top:25%;
+    left:50%;
+    transform : translateX(-50%);
+}
+
+.label-graph{
+    position: absolute;
+    top: 2%;
+    left: 1%;
 }
 
 @media screen and (min-width:1281px) and (max-width : 1481px){
