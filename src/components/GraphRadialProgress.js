@@ -3,7 +3,11 @@ import "../styles/radialProgress.css";
 import Proptypes from "prop-types";
 
 const GraphRadialProgress = ({ user, deviceGraph }) => {
-  const objectifUser = user.user.data != null ? user.user.data.todayScore * 100 : null;
+
+  const aaa = () => user.user.data.todayScore != null ? user.user.data.todayScore : user.user.data.score
+
+
+  const objectifUser = user.user.data != null ? aaa() * 100 : null;
 
   const dataScore = [{ name: "Objectif", value: objectifUser }];
 

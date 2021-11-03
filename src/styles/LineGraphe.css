@@ -4,9 +4,18 @@
     height: 180px;
 }
 
-@media screen and (min-width:1281px){
+@media screen and (min-width:1281px) and (max-width : 1481px){
+    .lineGraph{
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media screen and (min-width:1481px){
     .lineGraph{
         width: 300px;
         height: 300px;
     }
 }
+
+

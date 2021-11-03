@@ -11,6 +11,18 @@ const GraphBarChart = ({ activity }) => {
     activityUser[index].day = Number(index) + 1;
   }
 
+  const CustomToolTip = ({ payload, label, active }) => {
+    const valueTooltip = active && (
+      <div>
+        <p>{payload[0].value}kg</p>
+        <hr />
+        <p>{payload[1].value}kcal</p>
+      </div>
+    );
+
+    return valueTooltip;
+  };
+
   return (
     <div className="bar-graphe">
       <ResponsiveContainer width={"100%"} height={"90%"}>
@@ -30,14 +42,14 @@ const GraphBarChart = ({ activity }) => {
           <YAxis orientation="right" />
 
           <Tooltip
-            itemStyle={{
+            content={<CustomToolTip />}
+            wrapperStyle={{
               backgroundColor: "red",
               color: "white",
-              fontSize: "14px",
-              fontWeight: 500,
               textAlign: "center",
-              width: "39px",
-              height: "64px",
+              padding: "5px",
+              fontSize: "14px",
+              fontWeight: "bold",
             }}
           />
 
@@ -48,7 +60,7 @@ const GraphBarChart = ({ activity }) => {
             align={"right"}
             verticalAlign={"top"}
           />
-          <text x={10} y={15}  fontSize={20}>
+          <text x={10} y={15} fontSize={20}>
             Activité quotidienne
           </text>
 
