@@ -9,15 +9,17 @@ const GraphRadarChart = ({ performance, deviceGraph }) => {
    * @returns new object
    */
 
+  const wxc = [];
   const getData = (dataRadarGraph) => {
-    const val = Object.values(dataRadarGraph.kind);
+    const typeStats = ["Cardio", "Energie", "Endurance", "Force", "Vitesse", "Intensité"];
 
     for (let key in dataRadarGraph.data) {
-      dataRadarGraph.data[key].kind = val[key];
+      dataRadarGraph.data[key].kind = typeStats[key];
+      wxc.push(dataRadarGraph.data[key]);
     }
-    return dataRadarGraph;
+    wxc.reverse();
+    return wxc;
   };
-
   const performanceUser = performance.performance.data != null ? getData(performance.performance.data) : null;
 
   return performanceUser != null ? (
@@ -28,7 +30,7 @@ const GraphRadarChart = ({ performance, deviceGraph }) => {
         cx={deviceGraph / 2}
         cy={deviceGraph / 2}
         outerRadius={deviceGraph / 3}
-        data={performanceUser.data}
+        data={performanceUser}
       >
         <PolarGrid />
         <PolarAngleAxis dataKey="kind" stroke={"white"} fontSize="14px" />
@@ -38,6 +40,7 @@ const GraphRadarChart = ({ performance, deviceGraph }) => {
     </div>
   ) : null;
 };
+
 GraphRadarChart.propTypes = {
   performance: Proptypes.object.isRequired,
   deviceGraph: Proptypes.number.isRequired,

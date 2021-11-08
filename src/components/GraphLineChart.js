@@ -3,12 +3,25 @@ import "../styles/LineGraphe.css";
 import Proptypes from "prop-types";
 
 const GraphLineChart = ({ average, deviceGraph }) => {
-  const averageUser = average.average.data != null ? average.average.data.sessions : null;
+
+  const dayWeek = ["L","M","M","J","V","S","D"]
+  const setValueAxixXGraphic = () => {
+
+    const dataAverage = average.average.data.sessions
+    for (const index in dataAverage){
+      dataAverage[index].day = dayWeek[index]
+    }
+    return dataAverage
+  }
+  
+  const averageUser = average.average.data != null ? setValueAxixXGraphic() : null;
+
+
 
   const CustomToolTip = ({ payload, label, active }) => {
     const valueTooltip = active && (
       <div>
-        <p>{payload[0].value} min</p>
+        <p className="a">{payload[0].value} min</p>
       </div>
     );
     return valueTooltip;
@@ -38,7 +51,15 @@ const GraphLineChart = ({ average, deviceGraph }) => {
             fontSize: "14px",
           }}
         />
-        <Line type="basis" dataKey="sessionLength" stroke="white" strokeWidth={3} activeDot={{ r: 8 }} dot={{ r: 0 }} />
+        <Line
+          type="monothone"
+          dataKey="sessionLength"
+          stroke="white"
+          strokeWidth={3}
+          strokeDashArray={[5,5]}
+          activeDot={{ r: 8 }}
+          dot={{ r: 0 }}
+        />
       </LineChart>
 
       <span className="name-line">Durée moyenne des sessions </span>

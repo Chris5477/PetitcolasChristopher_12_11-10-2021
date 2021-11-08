@@ -4,25 +4,27 @@
     position: relative;
     background-color: #FBFBFB;
     border-radius: 5px;
+    font-size: 10px;
 }
 
 .objectif-in-progress{
     position: absolute;
-    top:25%;
+    top:40%;
     left:50%;
     transform : translateX(-50%);
 }
 
 .label-graph{
     position: absolute;
-    top: 2%;
-    left: 1%;
+    top: 5%;
+    left: 10%;
 }
 
 @media screen and (min-width:1281px) and (max-width : 1481px){
     .radial-graphe{
         width: 240px;
         height: 240px;
+        font-size: 14px;
     }
 }
 
@@ -30,6 +32,7 @@
     .radial-graphe{
         width: 300px;
         height: 300px;
+        font-size: 18px;
     }
 }
 
