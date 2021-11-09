@@ -28,6 +28,7 @@ const GraphBarChart = ({ activity }) => {
       <ResponsiveContainer width={"100%"} height={"90%"}>
         <BarChart
           data={activityUser}
+          barGap={10}
           margin={{
             top: 40,
             right: 20,

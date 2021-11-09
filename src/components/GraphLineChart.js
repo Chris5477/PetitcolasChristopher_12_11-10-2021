@@ -18,7 +18,7 @@ const GraphLineChart = ({ average, deviceGraph }) => {
 
 
 
-  const CustomToolTip = ({ payload, label, active }) => {
+  const CustomToolTip = ({ payload, _, active }) => {
     const valueTooltip = active && (
       <div>
         <p className="a">{payload[0].value} min</p>
@@ -52,13 +52,14 @@ const GraphLineChart = ({ average, deviceGraph }) => {
           }}
         />
         <Line
-          type="monothone"
+          type="monotone"
           dataKey="sessionLength"
           stroke="white"
           strokeWidth={3}
           strokeDashArray={[5,5]}
           activeDot={{ r: 8 }}
-          dot={{ r: 0 }}
+          dot={{ r: 0}}
+          
         />
       </LineChart>
 

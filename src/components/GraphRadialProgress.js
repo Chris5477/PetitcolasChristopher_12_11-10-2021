@@ -18,7 +18,7 @@ const GraphRadialProgress = ({ user, deviceGraph }) => {
         cx={circleSize / 2}
         cy={circleSize / 2}
         innerRadius={circleSize - circleSize / 2}
-        outerRadius={circleSize / 2 - 40 }
+        outerRadius={circleSize / 2 - 40}
         barSize={10}
         data={dataScore}
         startAngle={230}

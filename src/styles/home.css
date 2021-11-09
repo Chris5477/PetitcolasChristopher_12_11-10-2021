@@ -49,20 +49,20 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
+  
 }
 
 .description-container{
   background-color: #000000;
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   color : #e60000;
   font-size: 28px;  
   display: flex;
   justify-content:center;
   align-items:center;
   position:relative;
-  padding-bottom: 50px;
+  padding: 50px 15px;
   border-radius: 10px;
 }
 

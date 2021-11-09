@@ -1,4 +1,4 @@
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, LabelList } from "recharts";
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from "recharts";
 import "../styles/radarGraphe.css";
 import Proptypes from "prop-types";
 
@@ -33,9 +33,8 @@ const GraphRadarChart = ({ performance, deviceGraph }) => {
         data={performanceUser}
       >
         <PolarGrid />
-        <PolarAngleAxis dataKey="kind" stroke={"white"} fontSize="14px" />
+        <PolarAngleAxis dataKey="kind" stroke="white" fontSize={deviceGraph / 20} />
         <Radar dataKey="value" stroke="red" fill="red" fillOpacity={0.7} />
-        <LabelList color="white" />;
       </RadarChart>
     </div>
   ) : null;

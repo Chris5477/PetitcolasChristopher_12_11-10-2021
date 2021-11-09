@@ -9,7 +9,7 @@ const App = () => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/profil/:id" component={Profil} />
-        <Route path="/signup"/>
+        <Route path="/signup" />
         <Route component={Error} />
       </Switch>
     </BrowserRouter>

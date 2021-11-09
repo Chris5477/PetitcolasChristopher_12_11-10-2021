@@ -25,7 +25,8 @@ const ProfilContainer = ({
   getDataPerformance,
 }) => {
   /* To do requests api in terms of id user */
-  const widthDevice = window.innerWidth <= 1281 ? 180 : window.innerWidth > 1281 && window.innerWidth <= 1481 ? 240 : 300
+  const widthDevice =
+    window.innerWidth <= 1281 ? 180 : window.innerWidth > 1281 && window.innerWidth <= 1481 ? 240 : 300;
 
   useEffect(() => {
     getDataUser(id);

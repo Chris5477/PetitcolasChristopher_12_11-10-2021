@@ -11,7 +11,7 @@ const Header = ({ user }) => {
       </h2>
       <p className="objectif">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
     </header>
-  );  
+  );
 };
 
 Header.propTypes = {

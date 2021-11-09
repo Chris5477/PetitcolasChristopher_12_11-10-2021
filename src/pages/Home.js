@@ -1,6 +1,6 @@
 import "../styles/home.css";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.png";
 
 const Home = () => {
   return (
@@ -20,12 +20,15 @@ const Home = () => {
         </div>
         <div className="information-container">
           <div className="description-container">
-            <p>Sportsee est une applcation web vous permettant de visualiser vos seances de sports. Nous récoltons les informations de vos séances
-              afin de vous permettre de suivre votre alimentation , votre poids ou encore votre évolution sportive comme la performance. Nous vous proposons de 
-              voir toutes ces évolutions facilement via des graphiques.
-              N"hesitez pas à rejoindre l'aventure sportsee 
+            <p>
+              Sportsee est une applcation web vous permettant de visualiser vos seances de sports. Nous récoltons les
+              informations de vos séances afin de vous permettre de suivre votre alimentation , votre poids ou encore
+              votre évolution sportive comme la performance. Nous vous proposons de voir toutes ces évolutions
+              facilement via des graphiques. N"hesitez pas à rejoindre l'aventure sportsee
             </p>
-            <Link className="signup" to="">Inscription</Link>
+            <Link className="signup" to="">
+              Inscription
+            </Link>
           </div>
         </div>
       </div>
