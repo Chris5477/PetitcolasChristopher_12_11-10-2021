@@ -18,7 +18,7 @@ ContainerGraphs.propTypes = {
   user: Proptypes.object.isRequired,
   average: Proptypes.object.isRequired,
   performance: Proptypes.object.isRequired,
-  device: Proptypes.number.isRequired
+  device: Proptypes.number.isRequired,
 };
 
 export default ContainerGraphs;

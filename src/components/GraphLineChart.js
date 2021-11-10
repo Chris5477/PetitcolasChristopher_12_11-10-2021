@@ -5,6 +5,11 @@ import Proptypes from "prop-types";
 const GraphLineChart = ({ average, deviceGraph }) => {
 
   const dayWeek = ["L","M","M","J","V","S","D"]
+
+  /**
+   * allows to change the current value by its first letter
+   * @returns array
+   */
   const setValueAxixXGraphic = () => {
 
     const dataAverage = average.average.data.sessions
@@ -21,7 +26,7 @@ const GraphLineChart = ({ average, deviceGraph }) => {
   const CustomToolTip = ({ payload, _, active }) => {
     const valueTooltip = active && (
       <div>
-        <p className="a">{payload[0].value} min</p>
+        <p>{payload[0].value} min</p>
       </div>
     );
     return valueTooltip;

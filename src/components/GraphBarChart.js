@@ -40,8 +40,8 @@ const GraphBarChart = ({ activity }) => {
 
           <XAxis dataKey="day" />
 
-          <YAxis orientation="right" />
-
+          <YAxis yAxisid="right"  dataKey="kilogram" tickCount={20} domain={[0,400]} orientation="right" />
+      
           <Tooltip
             content={<CustomToolTip />}
             wrapperStyle={{
