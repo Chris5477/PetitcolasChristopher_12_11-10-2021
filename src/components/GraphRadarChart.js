@@ -1,3 +1,7 @@
+/** To create a graphic with Recharts, just go to the site to know the possibilities of a graph. A component will have parent components
+ or child components and each of these components will have props which can change apparence graph.
+ Warning, dats must to respect a format of data, see the doc of Recharts */
+
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from "recharts";
 import "../styles/radarGraphe.css";
 import Proptypes from "prop-types";

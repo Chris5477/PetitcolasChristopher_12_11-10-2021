@@ -1,4 +1,3 @@
-//IMPORT ALL DEPENDECIES
 import { Link } from "react-router-dom";
 import altere from "../assets/altere.png";
 import biker from "../assets/biker.png";
@@ -7,7 +6,6 @@ import swimmer from "../assets/swimmer.png";
 
 import "../styles/nav-secondary.css";
 
-//BUILD COMPONENT NAVIGATION2
 const Navigation2 = () => {
   return (
     <div className="second-nav">

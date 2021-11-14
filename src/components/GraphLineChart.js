@@ -1,29 +1,28 @@
+/** To create a graphic with Recharts, just go to the site to know the possibilities of a graph. A component will have parent components
+ or child components and each of these components will have props which can change apparence graph.
+ Warning, dats must to respect a format of data, see the doc of Recharts */
+
 import { LineChart, Line, XAxis, Tooltip, CartesianGrid } from "recharts";
 import "../styles/LineGraphe.css";
 import Proptypes from "prop-types";
 
 const GraphLineChart = ({ average, deviceGraph }) => {
+  const allDays = {
+    monday: "L",
+    tuesday: "M",
+    wednesday: "M",
+    thurday: "J",
+    friday: "F",
+    saturday: "S",
+    sunday: "D",
+  };
 
-  const dayWeek = ["L","M","M","J","V","S","D"]
+  const valuesOfAllDays = Object.values(allDays);
 
-  /**
-   * allows to change the current value by its first letter
-   * @returns array
-   */
-  const setValueAxixXGraphic = () => {
+  average.average.data?.sessions.map((el, index) => (el.day = valuesOfAllDays[index]));
+  const averageUser = average.average.data?.sessions;
 
-    const dataAverage = average.average.data.sessions
-    for (const index in dataAverage){
-      dataAverage[index].day = dayWeek[index]
-    }
-    return dataAverage
-  }
-  
-  const averageUser = average.average.data != null ? setValueAxixXGraphic() : null;
-
-
-
-  const CustomToolTip = ({ payload, _, active }) => {
+  const CustomStyleToolTip = ({ payload, _, active }) => {
     const valueTooltip = active && (
       <div>
         <p>{payload[0].value} min</p>
@@ -48,7 +47,7 @@ const GraphLineChart = ({ average, deviceGraph }) => {
         <CartesianGrid horizontalPoints={[0, 0]} verticalPoints={[0, 0]} />
         <XAxis dataKey="day" stroke="white" />
         <Tooltip
-          content={<CustomToolTip />}
+          content={<CustomStyleToolTip />}
           wrapperStyle={{
             backgroundColor: "white",
             textAlign: "center",
@@ -61,10 +60,9 @@ const GraphLineChart = ({ average, deviceGraph }) => {
           dataKey="sessionLength"
           stroke="white"
           strokeWidth={3}
-          strokeDashArray={[5,5]}
+          strokeDashArray={[5, 5]}
           activeDot={{ r: 8 }}
-          dot={{ r: 0}}
-          
+          dot={{ r: 0 }}
         />
       </LineChart>
 

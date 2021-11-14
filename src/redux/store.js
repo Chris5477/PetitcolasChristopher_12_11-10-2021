@@ -13,4 +13,5 @@ const rootReducer = combineReducers({
   average: dataAverageReducer,
 });
 
+// Allows to create as a big context React with more features and use library thunk to manage requests
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));

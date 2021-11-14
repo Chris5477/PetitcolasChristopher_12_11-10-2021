@@ -1,3 +1,8 @@
+/** To create a graphic with Recharts, just go to the site to know the possibilities of a graph. A component will have parent components
+ or child components and each of these components will have props which can change apparence graph.
+ Warning, dats must to respect a format of data, see the doc of Recharts */
+
+
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import "../styles/barChart.css";
 import Proptypes from "prop-types";
@@ -5,13 +10,13 @@ import Proptypes from "prop-types";
 const GraphBarChart = ({ activity }) => {
   const activityUser = activity.activity.data ? activity.activity.data.sessions : null;
 
-  /* Loop for in which change value of days by value of key to respect the axis X of BarChart */
+  /* Loop for in which change value of days by value of key to respect the model of the x axis */
 
   for (const index in activityUser) {
     activityUser[index].day = Number(index) + 1;
   }
 
-  const CustomToolTip = ({ payload, label, active }) => {
+  const CustomStyleToolTip = ({ payload, label, active }) => {
     const valueTooltip = active && (
       <div>
         <p>{payload[0].value}kg</p>
@@ -40,10 +45,10 @@ const GraphBarChart = ({ activity }) => {
 
           <XAxis dataKey="day" />
 
-          <YAxis yAxisid="right"  dataKey="kilogram" tickCount={20} domain={[0,400]} orientation="right" />
-      
+          <YAxis dataKey="kilogram" tickCount={10} domain={[0, 500]}  orientation="right" />
+
           <Tooltip
-            content={<CustomToolTip />}
+            content={<CustomStyleToolTip />}
             wrapperStyle={{
               backgroundColor: "red",
               color: "white",
@@ -65,7 +70,7 @@ const GraphBarChart = ({ activity }) => {
             Activité quotidienne
           </text>
 
-          <Bar dataKey="kilogram" name="poids (kg)" barSize={7} fill="black" />
+          <Bar dataKey="kilogram" name="poids (kg)"  barSize={7} fill="black" />
           <Bar dataKey="calories" name="calories brulées (kCal)" barSize={7} fill="red" />
         </BarChart>
       </ResponsiveContainer>

@@ -1,11 +1,16 @@
+/** To create a graphic with Recharts, just go to the site to know the possibilities of a graph. A component will have parent components
+ or child components and each of these components will have props which can change apparence graph.
+ Warning, dats must to respect a format of data, see the doc of Recharts */
+
 import { RadialBarChart, PolarAngleAxis, RadialBar } from "recharts";
 import "../styles/radialProgress.css";
 import Proptypes from "prop-types";
 
 const GraphRadialProgress = ({ user, deviceGraph }) => {
-  const aaa = () => (user.user.data.todayScore != null ? user.user.data.todayScore : user.user.data.score);
+  // api contains data that alternates between two names (score and todayScore)
+  const nameKeyApi = () => (user.user.data.todayScore != null ? user.user.data.todayScore : user.user.data.score);
 
-  const objectifUser = user.user.data != null ? aaa() * 100 : null;
+  const objectifUser = user.user.data != null ? nameKeyApi() * 100 : null;
 
   const dataScore = [{ name: "Objectif", value: objectifUser }];
 

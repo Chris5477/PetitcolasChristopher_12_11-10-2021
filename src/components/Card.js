@@ -29,4 +29,5 @@ Card.propTypes = {
   category: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
 };
+
 export default Card;

@@ -2,7 +2,7 @@ import "../styles/header.css";
 import Proptypes from "prop-types";
 
 const Header = ({ user }) => {
-  const informationUser = user.user.data != null ? user.user.data.userInfos.firstName : null;
+  const informationUser = user.user.data?.userInfos.firstName
 
   return (
     <header className="header">

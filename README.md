@@ -23,6 +23,10 @@ Reacharts
 
 # Start to use project 
 
+## `yarn`
+
+this command will allows you to install the dependencies
+
 ## `yarn start`
 
 Runs the app in the development mode.\

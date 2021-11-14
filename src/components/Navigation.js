@@ -1,4 +1,3 @@
-//IMPORT ALL DEPENDECIES
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
 import "../styles/nav-primary.css";

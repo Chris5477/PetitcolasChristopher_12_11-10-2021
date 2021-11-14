@@ -7,7 +7,8 @@ import lipide from "../assets/cheeseburger.svg";
 import PropTypes from "prop-types";
 
 const ContainerCard = ({ user }) => {
-  const data = user.user.data != null ? user.user.data.keyData : null;
+  
+  const data =  user.user.data?.keyData
 
   return data != null ? (
     <div className="container-cards">
