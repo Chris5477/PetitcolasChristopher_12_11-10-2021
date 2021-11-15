@@ -7,6 +7,8 @@ export const ERROR_GET_DATA_ACTIVITY = "ERROR_GET_DATA_ACTIVITY ";
  * @returns object with an action for reducer (redux)
  */
 
+export let setErrorMsg = null
+
 const loaderActivity = () => {
   return {
     type: LOAD_DATA_ACTIVITY,
@@ -50,6 +52,9 @@ export const apiCallActivity = (id) => {
     axios
       .get(`http://localhost:3000/user/${id}/activity`)
       .then((res) => dispatch(getDataSuccessActivity(res.data)))
-      .catch((err) => dispatch(errorGetDataActivity(err.message)));
+      .catch((err) => {
+        dispatch(errorGetDataActivity(err.message))
+        setErrorMsg = err.message;
+      })
   };
 };

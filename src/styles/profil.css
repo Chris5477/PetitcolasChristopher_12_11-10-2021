@@ -9,3 +9,13 @@
 .profil-container{
     position: relative;
 }
+
+.txt-error{
+    font-size: 50px;
+    margin: 0;
+    grid-area: 3/3/5/5;
+    text-align: center;
+    position: relative;
+    top: 60px;
+
+}

@@ -2,7 +2,6 @@
  or child components and each of these components will have props which can change apparence graph.
  Warning, dats must to respect a format of data, see the doc of Recharts */
 
-
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import "../styles/barChart.css";
 import Proptypes from "prop-types";
@@ -44,9 +43,7 @@ const GraphBarChart = ({ activity }) => {
           <CartesianGrid verticalPoints={[3, 3]} />
 
           <XAxis dataKey="day" />
-
-          <YAxis dataKey="kilogram" tickCount={10} domain={[0, 500]}  orientation="right" />
-
+          <YAxis dataKey="calories" tickCount={9} domain={[0, 500]} orientation="right" />
           <Tooltip
             content={<CustomStyleToolTip />}
             wrapperStyle={{
@@ -70,7 +67,7 @@ const GraphBarChart = ({ activity }) => {
             Activité quotidienne
           </text>
 
-          <Bar dataKey="kilogram" name="poids (kg)"  barSize={7} fill="black" />
+          <Bar dataKey="kilogram" name="poids (kg)" barSize={7} fill="black" />
           <Bar dataKey="calories" name="calories brulées (kCal)" barSize={7} fill="red" />
         </BarChart>
       </ResponsiveContainer>
