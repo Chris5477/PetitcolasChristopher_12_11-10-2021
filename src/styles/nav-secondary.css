@@ -31,5 +31,6 @@ footer {
   display: inline;
   width: 200px;
   position: absolute;
-  bottom: 16%;
+  bottom: 20%;
+  font-size: 10px;
 }

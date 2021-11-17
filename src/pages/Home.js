@@ -21,7 +21,7 @@ const Home = () => {
         <div className="information-container">
           <div className="description-container">
             <p>
-              Sportsee est une applcation web vous permettant de visualiser vos seances de sports. Nous récoltons les
+              Sportsee est une application web vous permettant de visualiser vos séances de sport. Nous récoltons les
               informations de vos séances afin de vous permettre de suivre votre alimentation , votre poids ou encore
               votre évolution sportive comme la performance. Nous vous proposons de voir toutes ces évolutions
               facilement via des graphiques. N"hesitez pas à rejoindre l'aventure sportsee

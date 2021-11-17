@@ -44,6 +44,6 @@ export const apiCallAvarage = (id) => {
     axios
       .get(`http://localhost:3000/user/${id}/average-sessions`)
       .then((res) => dispatch(getDataSuccessAverage(res.data)))
-      .catch((err) => dispatch(errorGetDataAverage(err.message)));
+      .catch((err) => dispatch(errorGetDataAverage(err.message + "zz")));
   };
 };

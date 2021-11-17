@@ -28,8 +28,8 @@ const ProfilContainer = ({
   const widthDevice =
     window.innerWidth <= 1281 ? 180 : window.innerWidth > 1281 && window.innerWidth <= 1481 ? 240 : 300;
 
-  const aaa = []
-  aaa.push(user.error, activity.error, average.error, performance.error)
+  const listErrorMsg = []
+  listErrorMsg.push(user.error, activity.error, average.error, performance.error)
 
   useEffect(() => {
     getDataUser(id);
@@ -43,8 +43,8 @@ const ProfilContainer = ({
   if(  user.isLoading || activity.isLoading || average.isLoading || performance.isLoading){
     responseCallsApi =  <div className="spinner"></div>
   }else if( user.error || activity.error || average.error || performance.error ){
-    const wxc = aaa.find(el => el)
-    responseCallsApi = <p className="txt-error">{wxc}</p>
+    const isErrorMsg = listErrorMsg.find(el => el)
+    responseCallsApi = <p className="txt-error">{isErrorMsg}</p>
   }else{
     responseCallsApi = 
     <>
@@ -55,18 +55,6 @@ const ProfilContainer = ({
        </>
   }
   
-  // const responseCallsApi =
-  //   user.isLoading || activity.isLoading || average.isLoading || performance.isLoading ? (
-  //     <div className="spinner"></div>
-  //   ) : (
-  //     <>
-  //       <Header user={user} />
-  //       <GraphBarChart activity={activity} />
-  //       <ContainerGraphs user={user} average={average} performance={performance} device={widthDevice} />
-  //       <ContainerCard user={user} />
-  //     </>
-  //   );
-
   return (
     <div className="profil-page">
       <Navigation />

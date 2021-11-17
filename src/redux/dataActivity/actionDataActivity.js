@@ -53,7 +53,7 @@ export const apiCallActivity = (id) => {
       .get(`http://localhost:3000/user/${id}/activity`)
       .then((res) => dispatch(getDataSuccessActivity(res.data)))
       .catch((err) => {
-        dispatch(errorGetDataActivity(err.message))
+        dispatch(errorGetDataActivity(err.message ))
         setErrorMsg = err.message;
       })
   };
